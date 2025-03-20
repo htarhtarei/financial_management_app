@@ -1,14 +1,15 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDLGz24Hia2LZKGor_fA6ek_v185Z950DQ",
-    authDomain: "finance-management-7373c.firebaseapp.com",
-    projectId: "finance-management-7373c",
-    storageBucket: "finance-management-7373c.firebasestorage.app",
-    messagingSenderId: "703026148771",
-    appId: "1:703026148771:web:5977195982b9beb80cd616",
-    measurementId: "G-CQCQ4VD60C"
+    apiKey: window.ENV.FIREBASE_API_KEY,
+    authDomain: window.ENV.FIREBASE_AUTH_DOMAIN,
+    projectId: window.ENV.FIREBASE_PROJECT_ID,
+    storageBucket: window.ENV.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: window.ENV.FIREBASE_MESSAGING_SENDER_ID,
+    appId: window.ENV.FIREBASE_APP_ID,
+    measurementId: window.ENV.FIREBASE_MEASUREMENT_ID,
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
